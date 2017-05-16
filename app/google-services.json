@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1078236377340",
+    "firebase_url": "https://prankyou-bc56d.firebaseio.com",
+    "project_id": "prankyou-bc56d",
+    "storage_bucket": "prankyou-bc56d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1078236377340:android:c0af7bbc46c618c9",
+        "android_client_info": {
+          "package_name": "com.amcoder.pranku"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1078236377340-aqte2ihsfc35mj40ufknl3kfnerv2cq5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_-QwSG9vhWSDjCzUACjbi3kibuvzE7rk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

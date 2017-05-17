@@ -1,4 +1,4 @@
-package com.amcoder.pranku;
+package com.amcoder.pranku.activities;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -17,6 +17,9 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.amcoder.pranku.R;
+import com.amcoder.pranku.fragment.UpLoadFileFragment;
+import com.amcoder.pranku.fragment.VideoListFragment;
 import com.google.android.youtube.player.YouTubeApiServiceUtil;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 

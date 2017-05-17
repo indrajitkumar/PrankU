@@ -1,4 +1,4 @@
-package com.amcoder.pranku;
+package com.amcoder.pranku.views;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -19,7 +19,7 @@ import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
 @SuppressLint("ViewConstructor")
-class VideoSurfaceView extends GLSurfaceView {
+public class VideoSurfaceView extends GLSurfaceView {
 
     VideoRender mRenderer;
     private MediaPlayer mMediaPlayer = null;

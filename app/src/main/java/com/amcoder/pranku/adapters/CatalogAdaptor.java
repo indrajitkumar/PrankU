@@ -1,10 +1,12 @@
-package com.amcoder.pranku;
+package com.amcoder.pranku.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.amcoder.pranku.R;
 
 
 public class CatalogAdaptor extends RecyclerView.Adapter<RecyclerView.ViewHolder> {

@@ -1,4 +1,4 @@
-package com.amcoder.pranku;
+package com.amcoder.pranku.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.amcoder.pranku.R;
 import com.amcoder.pranku.content.YouTubeContent;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubeThumbnailLoader;
@@ -16,7 +17,7 @@ import com.google.android.youtube.player.YouTubeThumbnailView;
 import java.util.HashMap;
 import java.util.Map;
 
-class VideoListAdapter extends BaseAdapter implements YouTubeThumbnailView.OnInitializedListener {
+public class VideoListAdapter extends BaseAdapter implements YouTubeThumbnailView.OnInitializedListener {
     private Context mContext;
     private Map<View, YouTubeThumbnailLoader> mLoaders;
 

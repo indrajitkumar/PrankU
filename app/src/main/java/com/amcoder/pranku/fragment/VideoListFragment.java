@@ -1,4 +1,4 @@
-package com.amcoder.pranku;
+package com.amcoder.pranku.fragment;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,11 +7,11 @@ import android.support.v4.app.ListFragment;
 import android.view.View;
 import android.widget.ListView;
 
+import com.amcoder.pranku.adapters.VideoListAdapter;
+import com.amcoder.pranku.activities.CustomLightboxActivity;
+import com.amcoder.pranku.R;
 import com.amcoder.pranku.content.YouTubeContent;
 
-/**
- * Created by philips on 5/17/17.
- */
 
 public class VideoListFragment extends ListFragment {
     /**

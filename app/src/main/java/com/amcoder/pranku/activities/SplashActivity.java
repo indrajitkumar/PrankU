@@ -1,4 +1,4 @@
-package com.amcoder.pranku;
+package com.amcoder.pranku.activities;
 
 import android.app.Activity;
 import android.content.Context;
@@ -7,6 +7,9 @@ import android.content.res.AssetFileDescriptor;
 import android.content.res.Resources;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+
+import com.amcoder.pranku.R;
+import com.amcoder.pranku.views.VideoSurfaceView;
 
 public class SplashActivity extends Activity {
 
@@ -47,6 +50,7 @@ public class SplashActivity extends Activity {
             public void onCompletion(MediaPlayer mp) {
                 Intent intent = new Intent(pContext, MainActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 

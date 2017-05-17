@@ -1,28 +1,15 @@
-package com.amcoder.pranku;
+package com.amcoder.pranku.fragment;
 
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
 
+import com.amcoder.pranku.R;
 import com.amcoder.pranku.Utility.PrankUtility;
-import com.amcoder.pranku.fragment.ProductFormDialog;
-import com.amcoder.pranku.model.Product;
-import com.google.firebase.storage.StorageReference;
-
-import java.io.IOException;
-import java.util.ArrayList;
-
-import static android.app.Activity.RESULT_OK;
 
 public class UpLoadFileFragment extends Fragment {
 

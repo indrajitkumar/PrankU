@@ -70,7 +70,7 @@
         <fragment xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/video_list"
-            android:name="com.amcoder.pranku.VideoListFragment"
+            android:name="com.amcoder.pranku.fragment.VideoListFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="16dp"

@@ -28,12 +28,12 @@ public class MediaPlayerSurfaceStubActivity extends Activity implements View.OnC
         mMediaPlayer = new MediaPlayer();
 
         try {
-            AssetFileDescriptor afd = mResources.openRawResourceFd(R.raw.testvideo);
+            AssetFileDescriptor afd = mResources.openRawResourceFd(R.raw.splash_video);
             mMediaPlayer.setDataSource(
                     afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
             afd.close();
         } catch (Exception e) {
-            Log.e(TAG, e.getMessage(), e);
+           // Log.e(TAG, e.getMessage(), e);
         }
 
         mVideoView = new VideoSurfaceView(this, mMediaPlayer);

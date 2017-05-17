@@ -7,11 +7,10 @@ import android.content.res.AssetFileDescriptor;
 import android.content.res.Resources;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.view.View;
 
-public class MediaPlayerSurfaceStubActivity extends Activity implements View.OnClickListener {
+public class SplashActivity extends Activity {
 
-    private static final String TAG = "MediaPlayerSurfaceStubActivity";
+    private static final String TAG = "SplashActivity";
 
     protected Resources mResources;
     private Context pContext;
@@ -51,11 +50,5 @@ public class MediaPlayerSurfaceStubActivity extends Activity implements View.OnC
             }
         });
 
-    }
-
-    @Override
-    public void onClick(View v) {
-        Intent intent = new Intent(this, MainActivity.class);
-        this.startActivity(intent);
     }
 }

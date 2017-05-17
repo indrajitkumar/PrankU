@@ -21,4 +21,10 @@
     <color name="cyan_50">#E0F7FA</color>
     <color name="amber_50">#FFF8E1</color>
     <color name="purple_50">#F3E5F5</color>
+    <color name="transparent_black">#E6000000</color>
+
+    <color name="black">#000000</color>
+    <color name="app_primary">#A94246</color>
+    <color name="app_primary_dark">#872328</color>
+    <color name="app_primary_accent">#F9B0B4</color>
 </resources>

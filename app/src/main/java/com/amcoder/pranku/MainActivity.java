@@ -24,6 +24,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
+import com.google.android.youtube.player.YouTubeApiServiceUtil;
+import com.google.android.youtube.player.YouTubeInitializationResult;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,9 +41,16 @@ public class MainActivity extends AppCompatActivity {
 
         final Toolbar toolbar = (Toolbar) findViewById(R.id.htab_toolbar);
         setSupportActionBar(toolbar);
-        if (getSupportActionBar() != null) getSupportActionBar().setTitle("Parallax Tabs");
+        if (getSupportActionBar() != null) getSupportActionBar().setTitle("PrankU");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        //Check for any issues
+        final YouTubeInitializationResult result = YouTubeApiServiceUtil.isYouTubeApiServiceAvailable(this);
+
+        if (result != YouTubeInitializationResult.SUCCESS) {
+            //If there are any issues we can show an error dialog.
+            result.getErrorDialog(this, 0).show();
+        }
         final ViewPager viewPager = (ViewPager) findViewById(R.id.htab_viewpager);
         setupViewPager(viewPager);
 
@@ -103,9 +113,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFrag(new UpLoadFileFragment(), "Funny Videos");
-        adapter.addFrag(new DummyFragment(
-                ContextCompat.getColor(this, R.color.amber_50)), "Prank your friend");
+        adapter.addFrag(new UpLoadFileFragment(), "Prank your friend");
+        adapter.addFrag(new VideoListFragment(), "Funny Videos");
 //        adapter.addFrag(new DummyFragment(
 //                ContextCompat.getColor(this, R.color.purple_50)), "Purple");
         viewPager.setAdapter(adapter);

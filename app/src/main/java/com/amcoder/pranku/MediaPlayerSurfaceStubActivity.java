@@ -7,7 +7,6 @@ import android.content.res.AssetFileDescriptor;
 import android.content.res.Resources;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 
 public class MediaPlayerSurfaceStubActivity extends Activity implements View.OnClickListener {
@@ -33,22 +32,11 @@ public class MediaPlayerSurfaceStubActivity extends Activity implements View.OnC
                     afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
             afd.close();
         } catch (Exception e) {
-           // Log.e(TAG, e.getMessage(), e);
+            // Log.e(TAG, e.getMessage(), e);
         }
 
         mVideoView = new VideoSurfaceView(this, mMediaPlayer);
         setContentView(mVideoView);
-
-//        LinearLayout ll = new LinearLayout(this);
-//        Button button = new Button(this);
-//        button.setOnClickListener(this);
-//        button.setText("Prank your friends");
-//        button.setBackgroundColor(getResources().getColor(R.color.primary_light));
-//        button.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
-//        ll.addView(button);
-//        ll.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.CENTER_VERTICAL);
-//        this.addContentView(ll,
-//                new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
     }
 
     @Override

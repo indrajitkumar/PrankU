@@ -15,18 +15,24 @@
         android:supportsRtl="true"
         android:theme="@style/MyTheme">
         <activity android:name=".activities.SplashActivity">
+          <!--  <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+        <activity android:name=".activities.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.MainActivity" />
         <activity
             android:name=".activities.CustomLightboxActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:theme="@style/AppTheme.Translucent" />
-        <activity android:name=".CustomYouTubeControlsActivity" />
+       <!-- <activity android:name=".CustomYouTubeControlsActivity" />-->
 
     </application>
 

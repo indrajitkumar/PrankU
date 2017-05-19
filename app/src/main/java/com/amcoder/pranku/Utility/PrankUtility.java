@@ -1,20 +1,21 @@
 package com.amcoder.pranku.Utility;
 
+import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 
+import com.amcoder.pranku.R;
 import com.amcoder.pranku.model.Product;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -105,19 +106,11 @@ public class PrankUtility {
         return byteArray;
     }
 
-    private void getProductsFromFireBase(String tableName) {
-        DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child(tableName);
-        ref.addListenerForSingleValueEvent(
-                new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                    }
-
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-                    }
-                });
-
+    public static int getThemeColor(Context context) {
+        TypedArray a = context.getTheme().obtainStyledAttributes(new int[]{R.attr.actionMenuTextColor});
+        int mThemeBaseColor = a.getColor(0, ContextCompat.getColor(context, R.color.app_primary_dark));
+        a.recycle();
+        return mThemeBaseColor;
     }
 
 }

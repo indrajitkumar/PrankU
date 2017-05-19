@@ -18,6 +18,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.amcoder.pranku.R;
+import com.amcoder.pranku.fragment.PrankProductListFragment;
 import com.amcoder.pranku.fragment.UpLoadFileFragment;
 import com.amcoder.pranku.fragment.VideoListFragment;
 import com.google.android.youtube.player.YouTubeApiServiceUtil;
@@ -25,6 +26,8 @@ import com.google.android.youtube.player.YouTubeInitializationResult;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,6 +37,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tabs_header);
+        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
+                .setDefaultFontPath("fonts/centralesansbook.ttf")
+                .setFontAttrId(R.attr.fontPath)
+                .build());
 
         final Toolbar toolbar = (Toolbar) findViewById(R.id.htab_toolbar);
         setSupportActionBar(toolbar);
@@ -110,6 +117,7 @@ public class MainActivity extends AppCompatActivity {
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFrag(new UpLoadFileFragment(), "Prank your friend");
+        adapter.addFrag(new PrankProductListFragment(), "Prank Products");
         adapter.addFrag(new VideoListFragment(), "Funny Videos");
         viewPager.setAdapter(adapter);
     }

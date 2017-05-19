@@ -20,4 +20,16 @@
         <item name="android:colorBackgroundCacheHint">@null</item>
         <item name="android:windowIsTranslucent">true</item>
     </style>
+
+    <style name="centralesansBoldFont">
+        <item name="fontPath">fonts/centralesansbold.ttf</item>
+    </style>
+
+    <style name="centralesansLightFont">
+        <item name="fontPath">fonts/centralesanslight.ttf</item>
+    </style>
+
+    <style name="centralesansBookFont">
+        <item name="fontPath">fonts/centralesansbook.ttf</item>
+    </style>
 </resources>

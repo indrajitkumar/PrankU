@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="network_image_width">88dp</dimen>
+    <dimen name="network_image_height">88dp</dimen>
+    <dimen name="border12_margin">12dp</dimen>
+    <dimen name="border16_margin_left_right">16dp</dimen>
+    <dimen name="image_margin_top">20dp</dimen>
+    <dimen name="border4_margin">4dp</dimen>
+</resources>

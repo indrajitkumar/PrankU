@@ -34,6 +34,9 @@ dependencies {
     compile "com.android.support:palette-v7:25.3.1"
     testCompile 'junit:junit:4.12'
 
+    compile 'com.android.volley:volley:1.0.0'
+    compile 'com.shamanland:fonticon:0.1.9'
+    compile 'uk.co.chrisjenx:calligraphy:2.1.0'
     compile 'com.google.firebase:firebase-auth:10.2.4'
     compile 'com.google.firebase:firebase-database:10.2.4'
     compile 'com.google.firebase:firebase-storage:10.2.4'

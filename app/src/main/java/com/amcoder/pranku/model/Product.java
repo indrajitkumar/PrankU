@@ -10,11 +10,25 @@ public class Product {
 
     String title;
 
-    String description ;
+    String description;
 
-    String price ;
+    String price;
 
     String discountPrice;
+
+    public String getImageURL() {
+        return mImageURL;
+    }
+
+    String productID;
+
+    ArrayList<String> urls;
+
+    public void setImageURL(String mImageURL) {
+        this.mImageURL = mImageURL;
+    }
+
+    private String mImageURL;
 
     public String getProductID() {
         return productID;
@@ -24,9 +38,6 @@ public class Product {
         this.productID = productID;
     }
 
-    String productID;
-
-    ArrayList<String> urls;
 
     public String getTitle() {
         return title;
@@ -68,12 +79,17 @@ public class Product {
         this.urls = urls;
     }
 
-    public Product(String title, String description, String price, String discountPrice ,String productID) {
+    public Product() {
+
+    }
+
+    public Product(String title, String description, String price, String discountPrice, String productID, String pImageUrl) {
 
         this.title = title;
         this.description = description;
         this.price = price;
         this.discountPrice = discountPrice;
-        this.productID=productID;
+        this.productID = productID;
+        this.mImageURL = pImageUrl;
     }
 }

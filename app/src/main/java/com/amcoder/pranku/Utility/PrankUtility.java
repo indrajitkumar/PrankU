@@ -1,5 +1,6 @@
 package com.amcoder.pranku.Utility;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
@@ -9,6 +10,7 @@ import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
+import android.view.inputmethod.InputMethodManager;
 
 import com.amcoder.pranku.R;
 import com.amcoder.pranku.model.Product;
@@ -113,4 +115,13 @@ public class PrankUtility {
         return mThemeBaseColor;
     }
 
+    public static void hideKeypad(Context pContext) {
+        InputMethodManager inputMethodManager = (InputMethodManager)
+                pContext.getSystemService(Context.INPUT_METHOD_SERVICE);
+
+        if (null != ((Activity) pContext).getCurrentFocus()) {
+            inputMethodManager.hideSoftInputFromWindow(((Activity) pContext).getCurrentFocus().getWindowToken(),
+                    0);
+        }
+    }
 }

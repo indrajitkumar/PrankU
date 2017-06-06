@@ -11,8 +11,10 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.amcoder.pranku.R;
+import com.amcoder.pranku.Utility.Constant;
 import com.amcoder.pranku.Utility.NetworkImageLoader;
 import com.amcoder.pranku.Utility.PrankUtility;
+import com.amcoder.pranku.eventhelper.EventHelper;
 import com.amcoder.pranku.model.Product;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
@@ -96,6 +98,7 @@ public class ProductListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
     private void setTheProductDataForDisplayingInProductDetailPage(int position) {
         mSelectedProduct = mProductList.get(position);
+        EventHelper.getInstance().notifyEventOccurred(Constant.IAP_LAUNCH_SHIPPING_ADDRESS);
     }
 
     private class ProductListViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
@@ -122,7 +125,7 @@ public class ProductListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             boolean isSelected = this.itemView.isSelected();
             this.itemView.setSelected(!isSelected);
             this.itemView.setBackgroundColor(isSelected ? Color.TRANSPARENT : ContextCompat.getColor(this.itemView.getContext(), R.color.divider));
-//            setTheProductDataForDisplayingInProductDetailPage(getAdapterPosition());
+            setTheProductDataForDisplayingInProductDetailPage(getAdapterPosition());
         }
     }
 }

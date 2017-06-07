@@ -5,24 +5,51 @@
 
 package com.amcoder.pranku.address;
 
+import com.activeandroid.Model;
+import com.activeandroid.annotation.Column;
+import com.activeandroid.annotation.Table;
+
 import java.io.Serializable;
 
-public class AddressFields implements Serializable, Cloneable {
+@Table(name = "AddressFields")
+public class AddressFields extends Model implements Serializable, Cloneable {
 
     private static final long serialVersionUID = 8533528348900570462L;
 
+    @Column(name = "firstName")
     private String firstName;
+
+    @Column(name = "lastName")
     private String lastName;
+
+    @Column(name = "titleCode")
     private String titleCode;
+
+    @Column(name = "countryIsocode")
     private String countryIsocode;
+
+    @Column(name = "email")
     private String email;
+
+    @Column(name = "line1")
     private String line1;
+
+    @Column(name = "line2")
     private String line2;
+
+    @Column(name = "postalCode")
     private String postalCode;
+
+    @Column(name = "town")
     private String town;
+
+    @Column(name = "phoneNumber")
     private String phoneNumber;
 
+    @Column(name = "regionIsoCode")
     private String regionIsoCode;
+
+    @Column(name = "regionName")
     private String regionName;
 
     public String getEmail() {
@@ -119,6 +146,10 @@ public class AddressFields implements Serializable, Cloneable {
 
     public void setRegionName(String regionName) {
         this.regionName = regionName;
+    }
+
+    public AddressFields() {
+       super();
     }
 
     @Override

@@ -7,7 +7,7 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
-        android:name="android.support.multidex.MultiDexApplication"
+        android:name=".PrankUApplication"
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
@@ -42,6 +42,10 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:theme="@style/AppTheme.Translucent" />
        <!-- <activity android:name=".CustomYouTubeControlsActivity" />-->
+
+
+        <meta-data android:name="AA_DB_NAME" android:value="Prank" />
+        <meta-data android:name="AA_DB_VERSION" android:value="1" />
 
     </application>
 

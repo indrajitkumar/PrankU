@@ -12,7 +12,10 @@ import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.inputmethod.InputMethodManager;
 
+import com.activeandroid.Model;
+import com.activeandroid.query.Select;
 import com.amcoder.pranku.R;
+import com.amcoder.pranku.address.AddressFields;
 import com.amcoder.pranku.model.Product;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -24,6 +27,7 @@ import com.google.firebase.storage.UploadTask;
 
 import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class PrankUtility {
@@ -123,5 +127,14 @@ public class PrankUtility {
             inputMethodManager.hideSoftInputFromWindow(((Activity) pContext).getCurrentFocus().getWindowToken(),
                     0);
         }
+    }
+
+    private void saveAddressToDB(AddressFields addressFields){
+        addressFields.save();
+    }
+
+    private List<AddressFields> getAddressList(){
+
+        return new Select().from(AddressFields.class).execute();
     }
 }

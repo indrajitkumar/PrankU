@@ -32,4 +32,23 @@
     <style name="centralesansBookFont">
         <item name="fontPath">fonts/centralesansbook.ttf</item>
     </style>
+
+    <style name="buttonStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:enabled">false</item>
+        <item name="android:layout_height">@dimen/shipping_address_continue_button_height</item>
+        <item name="android:layout_marginBottom">
+            @dimen/shipping_address_continue_margin_bottom
+        </item>
+        <item name="android:layout_marginLeft">
+            @dimen/shipping_address_cancel_button_margin_left_right
+        </item>
+        <item name="android:layout_marginRight">
+            @dimen/shipping_address_cancel_button_margin_left_right
+        </item>
+        <item name="android:layout_marginTop">
+            @dimen/shipping_address_continue_margin_top
+        </item>
+    </style>
+
 </resources>

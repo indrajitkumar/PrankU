@@ -6,4 +6,25 @@
     <dimen name="border16_margin_left_right">16dp</dimen>
     <dimen name="image_margin_top">20dp</dimen>
     <dimen name="border4_margin">4dp</dimen>
+    <dimen name="shipping_address_cancel_button_height">44dp</dimen>
+    <dimen name="shipping_address_cancel_button_margin_bottom">20dp</dimen>
+    <dimen name="shipping_address_cancel_button_margin_left_right">20dp</dimen>
+    <dimen name="shipping_address_continue_button_height">44dp</dimen>
+    <dimen name="shipping_address_continue_margin_bottom">7dp</dimen>
+    <dimen name="shipping_address_continue_margin_top">33dp</dimen>
+    <dimen name="view_height">1dp</dimen>
+    <dimen name="selection_address_layout_margin">20dp</dimen>
+    <dimen name="shipping_address_margin_left">20dp</dimen>
+    <dimen name="shipping_address_margin_top_bottom">33dp</dimen>
+    <dimen name="shipping_address_title_size">20sp</dimen>
+    <dimen name="billing_toggle_margin_top">11dp</dimen>
+    <dimen name="billing_toggle_margin_right">31dp</dimen>
+
+    <!--Popup Over menu-->
+    <dimen name="popup_menu_width">180dp</dimen>
+    <dimen name="popup_text_size">16sp</dimen>
+    <dimen name="popup_top_margin">5dp</dimen>
+    <dimen name="uikit_modal_alert_button_width">118dp</dimen>
+    <dimen name="count_drop_down_icon_width">10dp</dimen>
+    <dimen name="count_drop_down_icon_height">5dp</dimen>
 </resources>

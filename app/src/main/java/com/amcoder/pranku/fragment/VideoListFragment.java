@@ -32,6 +32,12 @@ public class VideoListFragment extends ListFragment {
     }
 
     @Override
+    public void onResume() {
+        super.onResume();
+        //setTitleAndBackButtonVisibility(R.string.upload_fragment, true);
+    }
+
+    @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
 
         final Context context = getActivity();

@@ -1,1 +1,1 @@
-include ':app', ':PayU-release', ':activeandroid-3.0'
+include ':app', ':PayU-release', ':activeandroid-3.0', ':uikitLib'

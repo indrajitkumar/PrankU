@@ -1,1 +1,1 @@
-include ':app'
+include ':app', ':PayU-release', ':activeandroid-3.0'

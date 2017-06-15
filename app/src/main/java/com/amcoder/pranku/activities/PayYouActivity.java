@@ -57,7 +57,7 @@ public class PayYouActivity extends Activity {
 
     }
 
-    public static String hashCal(String type, String str) {
+   /* public static String hashCal(String type, String str) {
         byte[] hashseq = str.getBytes();
         StringBufferhexString = new StringBuffer();
         try { MessageDigest algorithm = MessageDigest.getInstance(type); algorithm.reset();
@@ -66,5 +66,5 @@ public class PayYouActivity extends Activity {
             for (inti = 0; i<messageDigest.length; i++) {String hex = Integer.toHexString(0xFF &messageDigest[i]);
                 if (hex.length() == 1) {hexString.append("0");}
                 hexString.append(hex);}} catch (NoSuchAlgorithmExceptionnsae) {}
-        returnhexString. toString();}
+        returnhexString. toString();}*/
 }

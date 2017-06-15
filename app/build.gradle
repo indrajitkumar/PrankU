@@ -43,7 +43,8 @@ dependencies {
     compile 'com.google.firebase:firebase-database:10.2.4'
     compile 'com.google.firebase:firebase-storage:10.2.4'
     compile project(':uikitLib')
-    compile project(':PayU-release')
     compile project(':activeandroid-3.0')
+    compile project(':PGSDK_V2.0')
+    compile project(':payUMoneysdk')
 }
 apply plugin: 'com.google.gms.google-services'

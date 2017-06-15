@@ -1,1 +1,1 @@
-include ':app', ':PayU-release', ':activeandroid-3.0', ':uikitLib'
+include ':app', ':activeandroid-3.0', ':uikitLib', ':PGSDK_V2.0', ':payUMoneysdk'

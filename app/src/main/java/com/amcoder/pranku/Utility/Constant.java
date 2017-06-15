@@ -22,4 +22,9 @@ public class Constant {
     public static final String IAP_LAUNCH_SHIPPING_ADDRESS = "IAP_LAUNCH_SHIPPING_ADDRESS";
     public static final String EXTRA_ANIMATIONTYPE = "EXTRA_ANIMATIONTYPE";
     public static final String KEY_ACTIVITY_THEME = "KEY_ACTIVITY_THEME";
+
+    //PayU
+    public static final String PAYU_MID="5818867";
+    public static final String PAYU_KEY="Py18f6oj";
+    public static final String PAYU_SALT="tBBH0GMcMM";
 }

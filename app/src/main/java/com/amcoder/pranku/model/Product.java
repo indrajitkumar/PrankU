@@ -1,12 +1,13 @@
 package com.amcoder.pranku.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  * Created by philips on 5/15/17.
  */
 
-public class Product {
+public class Product implements Serializable{
 
     String title;
 

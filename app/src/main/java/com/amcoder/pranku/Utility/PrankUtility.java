@@ -9,10 +9,10 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.inputmethod.InputMethodManager;
 
-import com.activeandroid.Model;
 import com.activeandroid.query.Select;
 import com.amcoder.pranku.R;
 import com.amcoder.pranku.address.AddressFields;
@@ -28,6 +28,7 @@ import com.google.firebase.storage.UploadTask;
 import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 
 public class PrankUtility {
@@ -129,12 +130,94 @@ public class PrankUtility {
         }
     }
 
-    private void saveAddressToDB(AddressFields addressFields){
+    public static void saveAddressToDB(AddressFields addressFields) {
         addressFields.save();
     }
 
-    private List<AddressFields> getAddressList(){
+    public static List<AddressFields> getAddressList() {
 
         return new Select().from(AddressFields.class).execute();
+    }
+
+
+    protected static void appendAddressWithNewLineIfNotNull(StringBuilder sb, String code) {
+        if (!TextUtils.isEmpty(code)) {
+            sb.append(code).append(Constant.NEW_LINE_ESCAPE_CHARACTER);
+        }
+    }
+
+    public static String formatAddress(final String address) {
+        if (address != null)
+            return address.replaceAll(", ", "\n");
+        else
+            return null;
+    }
+
+    public static String getAddressToDisplay(final AddressFields address) {
+        StringBuilder sb = new StringBuilder();
+        appendAddressWithNewLineIfNotNull(sb, address.getLine1());
+        appendAddressWithNewLineIfNotNull(sb, address.getLine2());
+        appendAddressWithNewLineIfNotNull(sb, address.getRegionName());
+        appendAddressWithNewLineIfNotNull(sb, address.getTown());
+        appendAddressWithNewLineIfNotNull(sb, address.getPostalCode());
+        return sb.toString();
+    }
+
+    private static boolean isNotNullNorEmpty(String field) {
+        return !TextUtils.isEmpty(field);
+    }
+
+    public static AddressFields prepareAddressFields(AddressFields addresses, String janRainEmail) {
+        AddressFields fields = new AddressFields();
+
+        if (isNotNullNorEmpty(addresses.getFirstName())) {
+            fields.setFirstName(addresses.getFirstName());
+        }
+
+        if (isNotNullNorEmpty(addresses.getLastName())) {
+            fields.setLastName(addresses.getLastName());
+        }
+
+        if (isNotNullNorEmpty(addresses.getTitleCode())) {
+            String titleCode = addresses.getTitleCode();
+            if (titleCode.trim().length() > 0)
+                fields.setTitleCode(titleCode.substring(0, 1).toUpperCase(Locale.getDefault())
+                        + titleCode.substring(1));
+        }
+
+        if (isNotNullNorEmpty(addresses.getLine1())) {
+            fields.setLine1(addresses.getLine1());
+        }
+
+        if (isNotNullNorEmpty(addresses.getLine2())) {
+            fields.setLine2(addresses.getLine2());
+        }
+
+        if (isNotNullNorEmpty(addresses.getTown())) {
+            fields.setTown(addresses.getTown());
+        }
+
+        if (isNotNullNorEmpty(addresses.getPostalCode())) {
+            fields.setPostalCode(addresses.getPostalCode());
+        }
+
+        if (isNotNullNorEmpty(addresses.getCountryIsocode())) {
+            fields.setCountryIsocode(addresses.getCountryIsocode());
+        }
+
+        if (isNotNullNorEmpty(addresses.getEmail())) {
+            fields.setEmail(addresses.getEmail());
+        } else {
+            fields.setEmail(janRainEmail); // Since there is no email response from hybris
+        }
+
+        if (isNotNullNorEmpty(addresses.getPhoneNumber())) {
+            fields.setPhoneNumber(addresses.getPhoneNumber());
+        }
+
+        if (addresses.getRegionName() != null) {
+            fields.setRegionName(addresses.getRegionName());
+        }
+        return fields;
     }
 }

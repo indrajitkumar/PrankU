@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,7 +29,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-public class PrankProductListFragment extends BaseFragment implements EventListener{
+public class PrankProductListFragment extends BaseFragment implements EventListener {
+    public static final String TAG = PrankProductListFragment.class.getSimpleName();
     private RecyclerView mRecyclerView;
     private Context mContext;
     private ProductListAdapter mAdapter;
@@ -59,6 +61,7 @@ public class PrankProductListFragment extends BaseFragment implements EventListe
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
+                Log.e(TAG, "Error" + databaseError.getDetails());
             }
         });
 
@@ -109,8 +112,9 @@ public class PrankProductListFragment extends BaseFragment implements EventListe
     }
 
     private void launchShippingAddressFragment() {
-        //addFragment(ShippingAddressFragment.createInstance(new Bundle(), AnimationType.NONE), ShippingAddressFragment.TAG);
         Intent intent = new Intent(getActivity(), PrankProductActivity.class);
+        Product productDetailPage = mAdapter.getTheProductForProductDetailPage();
+        intent.putExtra(Constant.DELIVER_PRODUCT, productDetailPage);
         startActivity(intent);
     }
 }

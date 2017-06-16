@@ -87,7 +87,7 @@ public class ShippingAddressFragment extends BaseFragment
     protected Button mBtnContinue;
     protected Button mBtnCancel;
 
-//    private PaymentController mPaymentController;
+    //    private PaymentController mPaymentController;
 //    private AddressController mAddressController;
     private AddressFields mShippingAddressFields;
 
@@ -179,8 +179,8 @@ public class ShippingAddressFragment extends BaseFragment
 //        mEtEmail.setEnabled(false);
 
 //        mEtCountry.setText(HybrisDelegate.getInstance(mContext).getStore().getCountry());
-        showUSRegions();
-        mEtCountry.setEnabled(false);
+      //  showUSRegions();
+        //mEtCountry.setEnabled(false);
 
         mEtFirstName.addTextChangedListener(new IAPTextWatcher(mEtFirstName));
         mEtLastName.addTextChangedListener(new IAPTextWatcher(mEtLastName));
@@ -246,7 +246,29 @@ public class ShippingAddressFragment extends BaseFragment
 
     @Override
     public void onClick(View v) {
+        PrankUtility.hideKeypad(mContext);
+        if (v == mBtnContinue) {
+            //Edit and save address
+            if (mBtnContinue.getText().toString().equalsIgnoreCase(getString(R.string.continuebtn))) {
+                AddressFields addressFields = new AddressFields();
+                addressFields.setFirstName(mEtFirstName.getText().toString());
+                addressFields.setLastName(mEtLastName.getText().toString());
+                addressFields.setTitleCode(mEtSalutation.getText().toString());
+                addressFields.setCountryIsocode(mEtCountry.getText().toString());
+                addressFields.setEmail(mEtEmail.getText().toString());
+                addressFields.setLine1(mEtAddressLineOne.getText().toString());
+                addressFields.setLine2(mEtAddressLineTwo.getText().toString());
+                addressFields.setPostalCode(mEtPostalCode.getText().toString());
+                addressFields.setTown(mEtTown.getText().toString());
+                addressFields.setPhoneNumber(mEtPhoneNumber.getText().toString());
 
+                PrankUtility.saveAddressToDB(addressFields);
+                addFragment(AddressSelectionFragment.createInstance(new Bundle(), AnimationType.NONE), AddressSelectionFragment.TAG);
+            }
+        }
+        else if (v == mBtnCancel) {
+                getFragmentManager().popBackStackImmediate();
+        }
     }
 //    @Override
 //    public void onClick(final View v) {
@@ -373,7 +395,7 @@ public class ShippingAddressFragment extends BaseFragment
         if (editText.getId() == R.id.et_country && !hasFocus) {
             result = mValidator.isValidCountry(mEtCountry.getText().toString());
             errorMessage = getResources().getString(R.string.iap_country_error);
-            showUSRegions();
+            //showUSRegions();
         }
         if (editText.getId() == R.id.et_postal_code && !hasFocus) {
             result = mValidator.isValidPostalCode(mEtPostalCode.getText().toString());
@@ -409,13 +431,13 @@ public class ShippingAddressFragment extends BaseFragment
         }
     }
 
-    private void showUSRegions() {
-        if (mEtCountry.getText().toString().equals("US")) {
-            mlLState.setVisibility(View.VISIBLE);
-        } else {
-            mlLState.setVisibility(View.GONE);
-        }
-    }
+//    private void showUSRegions() {
+//        if (mEtCountry.getText().toString().equals("US")) {
+//            mlLState.setVisibility(View.VISIBLE);
+//        } else {
+//            mlLState.setVisibility(View.GONE);
+//        }
+//    }
 
     @Override
     public void onResume() {

@@ -27,4 +27,27 @@
     <dimen name="uikit_modal_alert_button_width">118dp</dimen>
     <dimen name="count_drop_down_icon_width">10dp</dimen>
     <dimen name="count_drop_down_icon_height">5dp</dimen>
+    <dimen name="selection_address_select_address_text_size">20sp</dimen>
+    <dimen name="selection_address_select_address_margin_top">33dp</dimen>
+    <dimen name="divider_height">1dp</dimen>
+    <dimen name="selection_address_cancel_margin_bottom">11dp</dimen>
+    <dimen name="selection_address_layout_margin_top">12dp</dimen>
+    <dimen name="selection_address_margin_left">52dp</dimen>
+    <dimen name="selection_address_name_margin_top">16dp</dimen>
+    <dimen name="selection_address_text_size">16sp</dimen>
+    <dimen name="shopping_cart_image_margin_top">20dp</dimen>
+    <dimen name="shopping_cart_dots_margin_left">12dp</dimen>
+    <dimen name="selection_address_margin_top">9dp</dimen>
+    <dimen name="selection_address_new_margin_top">7dp</dimen>
+    <dimen name="selection_address_select_address_margint_top">33dp</dimen>
+    <dimen name="order_margin_top">12dp</dimen>
+    <dimen name="order_one_spacing">5dp</dimen>
+    <dimen name="edit_icon_width">18dp</dimen>
+    <dimen name="dots_padding">10dp</dimen>
+    <dimen name="quantity_price_start_margin">10dp</dimen>
+    <dimen name="quantity">14sp</dimen>
+    <dimen name="shopping_cart_image_right">12dp</dimen>
+    <dimen name="shopping_cart_price_margin_bottom">7dp</dimen>
+    <dimen name="image_margin_right">12dp</dimen>
+    <dimen name="count_drop_down_icon_padding">5dp</dimen>
 </resources>

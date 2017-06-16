@@ -2,6 +2,7 @@ package com.amcoder.pranku.fragment;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 
 import com.amcoder.pranku.activities.ActionBarListener;
 
@@ -41,15 +42,15 @@ public abstract class BaseFragment extends Fragment {
             mActionbarUpdateListener.updateActionBar(title, isVisible);
     }
 
-//    public void addFragment(BaseFragment newFragment,
-//                            String newFragmentTag) {
-//        if (getActivity() != null && !getActivity().isFinishing()) {
-//            FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-//            transaction.replace(getId(), newFragment, newFragmentTag);
-//            transaction.addToBackStack(newFragmentTag);
-//            transaction.commitAllowingStateLoss();
-//        }
-//    }
+    public void addFragment(BaseFragment newFragment,
+                            String newFragmentTag) {
+        if (getActivity() != null && !getActivity().isFinishing()) {
+            FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+            transaction.replace(getId(), newFragment, newFragmentTag);
+            transaction.addToBackStack(newFragmentTag);
+            transaction.commitAllowingStateLoss();
+        }
+    }
 
     public void showFragment(String fragmentTag) {
         if (getActivity() != null && !getActivity().isFinishing()) {

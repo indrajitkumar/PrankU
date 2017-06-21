@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="85dp"
+    android:orientation="vertical"
+    android:paddingBottom="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="@dimen/shipping_address_margin_left"
+        android:layout_marginStart="@dimen/shipping_address_margin_left"
+        android:layout_marginTop="@dimen/selection_address_layout_margin"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tv_title_delivery_address"
+            style="@style/tvHeaderTitle"
+            android:layout_marginBottom="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp" />
+
+        <TextView
+            android:id="@+id/tv_shipping_first_name"
+            style="@style/centralesansBoldFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/order_one_spacing"
+            android:layout_marginTop="@dimen/order_margin_top"
+            android:textColor="?attr/uikit_baseColor" />
+
+        <TextView
+            android:id="@+id/tv_shipping_address"
+            style="@style/tvTitle"
+            android:layout_marginTop="0dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="@dimen/selection_address_layout_margin"
+        android:layout_marginEnd="@dimen/shipping_address_margin_left"
+        android:layout_marginStart="@dimen/shipping_address_margin_left"
+        android:layout_marginTop="@dimen/selection_address_select_address_margint_top"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title_billing_address"
+            style="@style/tvHeaderTitle"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp" />
+
+        <TextView
+            android:id="@+id/tv_billing_first_name"
+            style="@style/centralesansBoldFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/order_one_spacing"
+            android:layout_marginTop="@dimen/order_margin_top"
+            android:textColor="?attr/uikit_baseColor" />
+
+        <TextView
+            android:id="@+id/tv_billing_address"
+            style="@style/tvTitle"
+            android:layout_marginTop="0dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="?attr/uikit_listDividerColor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="@dimen/shopping_cart_image_margin_top"
+        android:layout_marginStart="@dimen/shopping_cart_image_margin_top"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/shopping_cart_image_margin_top"
+            android:layout_marginTop="@dimen/shopping_cart_image_margin_top">
+
+            <ImageView
+                android:id="@+id/edit_icon"
+                android:layout_width="@dimen/edit_icon_width"
+                android:layout_height="@dimen/edit_icon_width"
+                android:layout_alignParentEnd="true"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_delivery_price"
+                style="@style/tvBoldTitle"
+                android:layout_marginBottom="0dp"
+                android:layout_marginEnd="@dimen/dots_padding"
+                android:layout_marginStart="0dp"
+                android:layout_toStartOf="@id/edit_icon" />
+
+            <TextView
+                android:id="@+id/tv_delivery"
+                style="@style/tvBoldTitle"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="0dp"
+                android:layout_marginStart="0dp"
+                android:layout_toStartOf="@id/tv_delivery_price" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/delivery_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="?attr/uikit_listDividerColor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="@dimen/shopping_cart_image_margin_top"
+        android:layout_marginEnd="@dimen/shopping_cart_image_margin_top"
+        android:layout_marginLeft="@dimen/shopping_cart_image_margin_top"
+        android:layout_marginRight="@dimen/shopping_cart_image_margin_top"
+        android:layout_marginStart="@dimen/shopping_cart_image_margin_top"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_vat"
+                style="@style/tvTitle"
+                android:layout_alignParentStart="true"
+                android:includeFontPadding="false" />
+
+            <TextView
+                android:id="@+id/tv_vat_price"
+                style="@style/tvTitle"
+                android:layout_alignParentEnd="true"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/shopping_cart_image_margin_top"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_total_lable"
+                style="@style/tvBoldTitle"
+                android:layout_alignParentStart="true"
+                android:includeFontPadding="false" />
+
+            <TextView
+                android:id="@+id/tv_vat_inclusive"
+                style="@style/tvTitle"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tv_total_lable"
+                android:includeFontPadding="false" />
+
+            <TextView
+                android:id="@+id/tv_total_price"
+                style="@style/tvBoldTitle"
+                android:layout_alignParentEnd="true" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

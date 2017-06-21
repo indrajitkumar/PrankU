@@ -31,11 +31,11 @@ public class ProductListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     private ArrayList<Product> mProductList = new ArrayList<>();
     private Product mSelectedProduct;
 
+
     public ProductListAdapter(Context pContext, ArrayList<Product> pProductList) {
         mContext = pContext;
         mProductList = pProductList;
         mImageLoader = NetworkImageLoader.getInstance(mContext).getImageLoader();
-
     }
 
     @Override
@@ -99,6 +99,10 @@ public class ProductListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     private void setTheProductDataForDisplayingInProductDetailPage(int position) {
         mSelectedProduct = mProductList.get(position);
         EventHelper.getInstance().notifyEventOccurred(Constant.IAP_LAUNCH_SHIPPING_ADDRESS);
+    }
+
+    public Product getTheProductForProductDetailPage() {
+        return mSelectedProduct;
     }
 
     private class ProductListViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {

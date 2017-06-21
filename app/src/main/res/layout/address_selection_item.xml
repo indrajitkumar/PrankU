@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.philips.cdp.uikit.customviews.UIKitRadioButton
+        android:id="@+id/rbtn_toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/selection_address_layout_margin"
+        android:layout_marginTop="@dimen/selection_address_layout_margin_top" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/centralesansBoldFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/selection_address_margin_left"
+        android:layout_marginTop="@dimen/selection_address_name_margin_top"
+        android:includeFontPadding="false"
+        android:textColor="?attr/uikit_baseColor"
+        android:textSize="@dimen/selection_address_text_size" />
+
+    <FrameLayout
+        android:id="@+id/options_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true">
+
+        <ImageView
+            android:id="@+id/img_options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginBottom="@dimen/shopping_cart_image_margin_top"
+            android:layout_marginEnd="@dimen/shopping_cart_image_margin_top"
+            android:layout_marginStart="@dimen/shopping_cart_dots_margin_left"
+            android:layout_marginTop="@dimen/shopping_cart_image_margin_top" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_address"
+        style="@style/centralesansBookFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name"
+        android:layout_marginStart="@dimen/selection_address_margin_left"
+        android:layout_marginTop="@dimen/selection_address_margin_top"
+        android:includeFontPadding="false"
+        android:textColor="@color/address_text_color"
+        android:textSize="@dimen/selection_address_text_size" />
+
+    <LinearLayout
+        android:id="@+id/payment_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_address"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btn_deliver_to_this_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_address"
+            android:layout_marginEnd="@dimen/selection_address_layout_margin"
+            android:layout_marginStart="@dimen/selection_address_layout_margin"
+            android:layout_marginTop="@dimen/selection_address_layout_margin"
+            android:text="@string/deliver_to_this_address"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_add_new_address"
+            style="?attr/uikit_outlinedButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_deliver_to_this_address"
+            android:layout_marginEnd="@dimen/selection_address_layout_margin"
+            android:layout_marginStart="@dimen/selection_address_layout_margin"
+            android:layout_marginTop="@dimen/selection_address_new_margin_top"
+            android:text="@string/add_new_address"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:layout_below="@id/payment_options"
+        android:layout_marginTop="@dimen/selection_address_layout_margin"
+        android:background="?attr/uikit_listDividerColor" />
+
+</RelativeLayout>

@@ -149,7 +149,7 @@ public class AddressFields extends Model implements Serializable, Cloneable {
     }
 
     public AddressFields() {
-       super();
+        super();
     }
 
     @Override
@@ -168,5 +168,9 @@ public class AddressFields extends Model implements Serializable, Cloneable {
         newFields.regionIsoCode = regionIsoCode;
         newFields.regionName = regionName;
         return newFields;
+    }
+
+    public String getFormattedAddress() {
+        return titleCode + firstName + lastName + line1 + postalCode + town + phoneNumber;
     }
 }

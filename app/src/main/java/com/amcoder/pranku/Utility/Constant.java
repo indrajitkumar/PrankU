@@ -1,9 +1,5 @@
 package com.amcoder.pranku.Utility;
 
-/**
- * Created by philips on 5/19/17.
- */
-
 public class Constant {
     public static final String UPDATE_SHIPPING_ADDRESS_KEY = "UPDATE_SHIPPING_ADDRESS_KEY";
     public static final String REGION_ISOCODE = "REGION_ISOCODE";
@@ -27,4 +23,10 @@ public class Constant {
     public static final String PAYU_MID="5818867";
     public static final String PAYU_KEY="Py18f6oj";
     public static final String PAYU_SALT="tBBH0GMcMM";
+    public final static String NEW_LINE_ESCAPE_CHARACTER = "\n";
+    public static final String ADD_NEW_ADDRESS = "ADD_NEW_ADDRESS";
+    public static final String DELIVER_TO_THIS_ADDRESS = "DELIVER_TO_THIS_ADDRESS";
+    public static final String ADDRESS_LIST = "ADDRESS_LIST";
+
+    public static final String DELIVER_PRODUCT = "DELIVER_PRODUCT";
 }

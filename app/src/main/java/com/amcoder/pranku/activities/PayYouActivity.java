@@ -3,20 +3,9 @@ package com.amcoder.pranku.activities;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
 
-import com.amcoder.pranku.Utility.Constant;
 import com.payUMoney.sdk.PayUmoneySdkInitilizer;
-import com.paytm.pgsdk.PaytmOrder;
-import com.paytm.pgsdk.PaytmPGService;
-import com.paytm.pgsdk.PaytmPaymentTransactionCallback;
-
-import java.security.MessageDigest;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Random;
 
 /**
  * Created by philips on 6/6/17.
@@ -39,8 +28,8 @@ public class PayYouActivity extends Activity {
                 PayUmoneySdkInitilizer.PaymentParam.Builder().
         setMerchantId("XXXXXX")
         .setKey("YYYYYYYY")
-        //.setIsDebug(true)                     // for Live mode -
-        .setIsDebug(false)
+        .setIsDebug(true)                     // for Live mode -
+        //.setIsDebug(false)
         .setAmount(20)
         .setTnxId("0nf7" + System.currentTimeMillis())
         .setPhone("8882434664")
@@ -54,6 +43,8 @@ public class PayYouActivity extends Activity {
         .setUdf3("")
         .setUdf4("")
         .setUdf5("");
+
+
 
     }
 
